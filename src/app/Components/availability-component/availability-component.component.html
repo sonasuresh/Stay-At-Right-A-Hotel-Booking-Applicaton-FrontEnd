@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<br />
+<div align="center">
+    <a class="navbar-brand" href="#">
+        <h3><b>CHECK AVAILABILITY STATUS</b></h3>
+    </a>
+</div>
+<br />
+<form [formGroup]="checkForm">
+    <fieldset>
+        <div class="form-group row">
+            <label for="no_of_guests" class="col-sm-2 col-form-label">Date</label>
+            <div class="col-sm-10">
+
+                <div class="input-group input-group-alternative">
+
+                    <div class="input-group-prepend">
+
+                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+
+                    </div>
+                    <input class="form-control datepicker" placeholder="Select date" type="date" formControlName="date">
+                </div>
+            </div>
+        </div>
+        <div align="center">
+            <button type="button" class="btn btn-info" (click)="check()">Check</button></div>
+        <br />
+        <h4>Number of available Rooms:{{availability}}</h4>
+
+    </fieldset>
+</form>
+{{availability}}
+<p></p>

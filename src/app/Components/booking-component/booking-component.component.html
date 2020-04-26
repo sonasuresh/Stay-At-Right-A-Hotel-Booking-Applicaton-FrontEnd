@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<br />
+<div align="center">
+  <a class="navbar-brand" href="#">
+    <h2><b>Book Your Rooms</b></h2>
+  </a>
+
+</div>
+<br />
+<form [formGroup]="bookForm">
+  <fieldset>
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="name" placeholder="Enter Your Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="phNo" class="col-sm-2 col-form-label">PhNo</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="phNo" placeholder="Enter Your Number">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="no_of_guests" class="col-sm-2 col-form-label">No of Guests</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="no_of_guests" placeholder="">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="no_of_rooms" class="col-sm-2 col-form-label">No of Rooms</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="no_of_rooms" placeholder="">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="date" class="col-sm-2 col-form-label">Booking Date</label>
+      <div class="col-sm-10">
+
+        <div class="input-group input-group-alternative">
+
+          <div class="input-group-prepend">
+
+            <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+
+          </div>
+          <input class="form-control datepicker" placeholder="Select date" type="date" formControlName="date">
+        </div>
+      </div>
+    </div>
+    <div align="center">
+      <button type="button" class="btn btn-info" (click)="book()">Book</button></div>
+  </fieldset>
+  <br />
+</form>
